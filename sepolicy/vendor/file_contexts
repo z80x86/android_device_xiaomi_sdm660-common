@@ -16,6 +16,8 @@
 /sys/devices/soc/soc:fpc1020(/.*)?              u:object_r:fingerprint_sysfs:s0
 /sys/bus/platform/devices/soc:fingerprint_fpc(/.*)?  u:object_r:fingerprint_sysfs:s0
 
+# Hall Switch
+/sys/module/hall/parameters(/.*)?               u:object_r:hall_dev:s0
 
 # Firmware
 /firmware                                                     u:object_r:firmware_file:s0
@@ -34,6 +36,10 @@
 # IR
 /dev/lirc0                                      u:object_r:spidev_device:s0
 /dev/spidev7.1                                  u:object_r:spidev_device:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?         u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?       u:object_r:kcal_dev:s0
 
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_sdm660                     u:object_r:hal_light_default_exec:s0
@@ -68,3 +74,4 @@
 
 # Service HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service u:object_r:hal_authsecret_default_exec:s0
+
