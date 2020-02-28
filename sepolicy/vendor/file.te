@@ -6,9 +6,6 @@ type sysfs_info, fs_type, sysfs_type;
 
 allow ueventd ir_dev_file:chr_file { create setattr };
 
-# Kcal
-type kcal_dev, sysfs_type, fs_type;
-
 # Touchscreen wake_gesture
 type sysfs_tap_to_wake, sysfs_type, fs_type;
 
