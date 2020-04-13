@@ -502,6 +502,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.xiaomi_sdm660
 
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)
+
 # VNDK
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
