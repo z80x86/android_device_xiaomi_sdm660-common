@@ -8,3 +8,4 @@ allow init sysfs_info:file { open read };
 allow init sysfs:file setattr;
 allow init persist_block_device:lnk_file relabelto;
 allow hal_lineage_livedisplay_qti qdisplay_service:service_manager find;
+allow init sysfs_graphics:file { open write };
